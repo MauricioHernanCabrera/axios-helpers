@@ -28,7 +28,7 @@ const axiosHelpers = (axios) => {
   const httpMethods = ["post", "get", "delete", "patch", "put"];
 
   httpMethods.forEach((httpMethod) => {
-    axios.$[httpMethod] = axiosData(httpMethod);
+    axios[`$${httpMethod}`] = axiosData(httpMethod);
   });
 
   axios.setHeader = setHeader(axios);
