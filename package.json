@@ -1,0 +1,25 @@
+{
+  "name": "axios-helpers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauricioHernanCabrera/axios-helpers.git"
+  },
+  "keywords": [
+    "axios",
+    "helpers",
+    "for",
+    "data"
+  ],
+  "author": "Mauricio Hernan Cabrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MauricioHernanCabrera/axios-helpers/issues"
+  },
+  "homepage": "https://github.com/MauricioHernanCabrera/axios-helpers#readme"
+}
