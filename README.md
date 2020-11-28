@@ -18,17 +18,16 @@ console.log(exampleCreated)
 
 ```js
 // bad
-axios.defaults.headers.common["Authorization"] = token
+axios.defaults.headers.common['Authorization'] = token
   
 // good
 axios.setToken(token)
 ```
 
 ### Set Bearer token
-
 ```js
 // bad
-axios.defaults.headers.common["Authorization"] = `Bearer ${token}`
+axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
   
 // good
 axios.setToken(token, 'Bearer')
@@ -36,22 +35,31 @@ axios.setToken(token, 'Bearer')
 
 ### Set Base URL
 ```js
-// set base url
 // bad
 axios.defaults.baseURL = 'https://example.com'
 
 // good
-axios.setBaseURL("https://example.com");
+axios.setBaseURL('https://example.com');
+```
+
+
+
+### Set header
+```js
+// bad
+axios.defaults.headers.common['Content-Type'] = 'application/json'
+  
+// good
+axios.setHeader('Content-Type', 'application/json')
 ```
 
 
 
 ### Basic example
 ```js
-// basic example
-const axiosHelpers = require("axios-helpers");
-const axios = axiosHelpers(require("axios"));
-axios.setBaseURL("https://example.com");
+const axiosHelpers = require('axios-helpers');
+const axios = axiosHelpers(require('axios'));
+axios.setBaseURL('https://example.com');
 
 const createExample = async (data) => {
   const exampleCreated = await axios.$post('/examples', data)
