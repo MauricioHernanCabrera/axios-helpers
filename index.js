@@ -7,7 +7,7 @@ const setHeader = (axios) => (property, data) => {
   axios.defaults.headers.common[property] = data;
 };
 
-const setBaseUrl = (axios) => (baseURL) => {
+const setBaseURL = (axios) => (baseURL) => {
   axios.defaults.baseURL = baseURL;
 };
 
@@ -32,7 +32,7 @@ const axiosHelpers = (axios) => {
   });
 
   axios.setHeader = setHeader(axios);
-  axios.setBaseUrl = setBaseUrl(axios);
+  axios.setBaseURL = setBaseURL(axios);
   axios.setToken = setToken(axios);
 
   return axios;
