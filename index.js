@@ -34,6 +34,8 @@ const axiosHelpers = (axios) => {
   axios.setHeader = setHeader(axios);
   axios.setBaseUrl = setBaseUrl(axios);
   axios.setToken = setToken(axios);
+
+  return axios;
 };
 
 module.exports = axiosHelpers;
