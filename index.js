@@ -1,6 +1,10 @@
 const axiosData = (axios, httpMethod) => async (...params) => {
-  const response = await axios[httpMethod](...params);
-  return response.data;
+  try {
+    const response = await axios[httpMethod](...params);
+    return Promise.resolve(response.data);
+  } catch (error) {
+    return Promise.reject(error.response.data);
+  }
 };
 
 const setHeader = (axios) => (property, data) => {
